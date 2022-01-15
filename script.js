@@ -2,6 +2,7 @@ var ghostEat_id=document.getElementById('ghostEat_id');
 var pacEat_id=document.getElementById('pacEat_id');
 var loser_id=document.getElementById('loser_id');
 var audio_id=document.getElementById('audio_id');
+var _body=document.getElementById('_body');
 console.log(pacEat_id)
 console.log(loser_id)
 console.log(ghostEat_id)
@@ -53,7 +54,7 @@ var powerdot = {
 var canvas = document.createElement("canvas");
 var context = canvas.getContext("2d");
 document.body.appendChild(canvas);
-canvas.width = 600;
+canvas.width = 600 ;
 canvas.height = 400;
 //import image
 var mainImage;
@@ -332,7 +333,7 @@ context.drawImage(mainImage, enemy.ghostNum, enemy.flash, 32, 32, enemy.x, enemy
 context.drawImage(mainImage, player.pacmouth, player.pacdir, 32, 32, player.x, player.y, 32,
 	32);
 }
-///////////////game over //////////
+//game over
 function gameOver(pac_score,ghost_gscore){
 	if(pac_score-ghost_gscore==differ_scre){
 		console.log("you are win");
